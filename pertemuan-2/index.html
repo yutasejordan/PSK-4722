@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="relative">
+    <div class="flex justify-between w-screen h-screen">
+      <aside class="h-screen bg-gray-600 min-w-[16%] px-8 py-4 text-white">
+        <h2 class="text-3xl font-extrabold mb-8">Admin Panel</h2>
+        <ul>
+          <li class="text-lg font-normal mb-2">
+            <a href="#" class="hover:ml-8 duration-700">Dashboard</a>
+          </li>
+          <li class="text-lg font-normal mb-2">
+            <a href="#" class="hover:ml-8 duration-700">Users</a>
+          </li>
+          <li class="text-lg font-normal mb-2">
+            <a href="#" class="hover:ml-8 duration-700">Settings</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="bg-gray-200 min-w-[84%] relative">
+        <header class="p-3 mb-4 w-full text-end bg-white shadow-lg">
+          <button
+            class="text-end bg-red-600 py-1.5 px-3 rounded-lg text-white font-medium hover:opacity-90"
+          >
+            Log out
+          </button>
+        </header>
+        <main class="px-3">
+          <header class="flex justify-between">
+            <h2 class="font-bold">Daftar User</h2>
+            <button
+              class="text-end bg-green-500 py-1.5 px-3 rounded-lg text-white font-medium hover:opacity-90"
+              id="button-tambah"
+            >
+              Tambah
+            </button>
+          </header>
+          <table class="min-w-full border border-gray-600 mt-8">
+            <thead>
+              <tr class="bg-gray-300">
+                <th class="py-2 px-4">#</th>
+                <th class="">Name</th>
+                <th class="">Role</th>
+                <th class="">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border border-gray-600 bg-white">
+                <td class="border border-gray-600 py-2 text-center">1</td>
+                <td class="border border-gray-600 py-2 text-center">
+                  Yutase Jordan Amrullah
+                </td>
+                <td class="border border-gray-600 py-2 text-center">Admin</td>
+                <td class="border border-gray-600 py-2 text-center">
+                  <button
+                    class="text-end bg-yellow-500 py-1.5 px-5 rounded-lg text-white font-medium hover:opacity-90"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    class="text-end bg-red-600 py-1.5 px-3 rounded-lg text-white font-medium hover:opacity-90"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+              <tr class="border border-gray-600 bg-gray-300">
+                <td class="border border-gray-600 py-2 text-center">2</td>
+                <td class="border border-gray-600 py-2 text-center">Sabdo</td>
+                <td class="border border-gray-600 py-2 text-center">User</td>
+                <td class="border border-gray-600 py-2 text-center">
+                  <button
+                    class="text-end bg-yellow-500 py-1.5 px-5 rounded-lg text-white font-medium hover:opacity-90"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    class="text-end bg-red-600 py-1.5 px-3 rounded-lg text-white font-medium hover:opacity-90"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+              <tr class="border border-gray-600 bg-white">
+                <td class="border border-gray-600 py-2 text-center">3</td>
+                <td class="border border-gray-600 py-2 text-center">Joko</td>
+                <td class="border border-gray-600 py-2 text-center">User</td>
+                <td class="border border-gray-600 py-2 text-center">
+                  <button
+                    class="text-end bg-yellow-500 py-1.5 px-5 rounded-lg text-white font-medium hover:opacity-90"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    class="text-end bg-red-600 py-1.5 px-3 rounded-lg text-white font-medium hover:opacity-90"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+        <footer
+          class="p-3 w-full text-center bg-white absolute bottom-0 font-bold text-lg text-gray-700"
+          style="box-shadow: 0 -1px 7px rgba(0, 0, 0, 0.5)"
+        >
+          @ Admin Yutase
+        </footer>
+      </section>
+    </div>
+    <div
+      class="absolute top-[50%] left-[50%] -translate-y-2/4 hidden -translate-x-2/4 bg-white rounded-xl w-96 p-6 shadow-xl"
+      id="form"
+    >
+      <h2 class="font-semibold text-lg mb-2">Tambah User</h2>
+      <p class="mb-1">Nama:</p>
+      <input
+        type="text"
+        class="min-w-full rounded-sm mb-2 border-black border"
+      />
+      <div class="btn text-end">
+        <button
+          class="text-end bg-gray-500 py-1.5 px-3 rounded-lg text-white font-medium hover:opacity-90"
+          id="btn"
+        >
+          Batal
+        </button>
+        <button
+          class="text-end bg-green-500 py-1.5 px-3 rounded-lg text-white font-medium hover:opacity-90"
+          id="btn"
+        >
+          Simpan
+        </button>
+      </div>
+    </div>
+    <div
+      class="absolute top-[50%] left-[50%] -translate-y-2/4 hidden -translate-x-2/4 bg-white rounded-xl w-96 p-6 shadow-xl"
+      id="form"
+    >
+      <h2 class="font-semibold text-lg mb-2">Edit User</h2>
+      <p class="mb-1">Nama:</p>
+      <input
+        type="text"
+        class="min-w-full rounded-sm mb-2 border-black border"
+      />
+      <div class="btn text-end">
+        <button
+          class="text-end bg-gray-500 py-1.5 px-3 rounded-lg text-white font-medium hover:opacity-90"
+          id="btn"
+        >
+          Batal
+        </button>
+        <button
+          class="text-end bg-green-500 py-1.5 px-3 rounded-lg text-white font-medium hover:opacity-90"
+          id="btn"
+        >
+          Simpan
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      const button = document.querySelectorAll("main button");
+      const form = document.querySelectorAll("#form");
+      const confirmationButton = document.querySelectorAll("#btn");
+
+      button.forEach((item) =>
+        item.addEventListener("click", (e) => {
+          if (e.target.innerHTML.includes("Tambah")) {
+            form[0].classList.remove("hidden");
+          } else if (e.target.innerHTML.includes("Edit")) {
+            form[1].classList.remove("hidden");
+          } else if (e.target.innerHTML.includes("Delete")) {
+            Swal.fire({
+              title: "Are you sure?",
+              text: "You won't be able to revert this!",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Yes, delete it!",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire({
+                  title: "Deleted!",
+                  text: "Your file has been deleted.",
+                  icon: "success",
+                });
+              }
+            });
+          }
+        })
+      );
+
+      confirmationButton.forEach((item) =>
+        item.addEventListener("click", (e) => {
+          if (e.target.innerHTML.includes("Batal")) {
+            form[0].classList.add("hidden");
+            form[1].classList.add("hidden");
+          } else if (e.target.innerHTML.includes("Simpan")) {
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Your work has been saved",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            form[0].classList.add("hidden");
+            form[1].classList.add("hidden");
+          }
+        })
+      );
+    </script>
+  </body>
+</html>

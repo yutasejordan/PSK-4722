@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pertemuan 1</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="logout-button">Log Out</button>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Users</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <h2>Daftar User</h2>
+        <button class="add-user-button" onclick="showPopup()">
+          Tambah User
+        </button>
+        <table>
+          <tr>
+            <th>#</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Alamat</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Yutase Jordan Amrullah</td>
+            <td>A11.2022.14505</td>
+            <td>Jl. Kanguru</td>
+            <td>
+              <button onclick="showPopup3()">Edit</button>
+              <button onclick="showPopup5()">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Helsa Zawiya</td>
+            <td>A11.2022.14500</td>
+            <td>Jl. Sendangguwo</td>
+            <td>
+              <button onclick="showPopup3()">Edit</button>
+              <button onclick="showPopup5()">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <footer><p>@ 2024 Yutase</p></footer>
+
+    <div class="add-user-card" id="popup">
+      <h2>Tambah User</h2>
+      <p>Nama:</p>
+      <input type="text" />
+      <button onclick="closePopup()">Batal</button>
+      <button onclick="showPopup2()">Simpan</button>
+    </div>
+
+    <div class="confirmed-user" id="popup2">
+      <p class="p1">User Berhasil Ditambah!</p>
+      <p class="p2" onclick="closePopup2()">close</p>
+    </div>
+
+    <div class="edit-user-card" id="popup3">
+      <h2>Edit User</h2>
+      <p>Nama:</p>
+      <input type="text" />
+      <button onclick="closePopup3()">Batal</button>
+      <button onclick="showPopup4()">Simpan</button>
+    </div>
+
+    <div class="confirmed-edit" id="popup4">
+      <p class="p1">User Berhasil Diedit!</p>
+      <p class="p2" onclick="closePopup4()">close</p>
+    </div>
+
+    <div class="confirm-delete" id="popup5">
+      <p class="p1">Apakah Kamu Yakin Ingin Hapus User Ini?</p>
+      <div class="confirm">
+        <p class="p2" onclick="closePopup5()">Cancel</p>
+        <p class="p2" onclick="showPopup6()">OK</p>
+      </div>
+    </div>
+
+    <div class="confirmed-deleted" id="popup6">
+      <p class="p1">User Berhasil Dihapus!</p>
+      <p class="p2" onclick="closePopup6()">close</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

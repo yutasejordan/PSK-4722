@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  outline: none;
+}
+
+.header {
+  padding: 14px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #000;
+}
+
+.header h1 {
+  color: #fff;
+}
+
+.logout-button {
+  background-color: #fff;
+  color: #000;
+  padding: 1px 4px;
+  border-radius: 9px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  height: 89vh;
+}
+
+.sidebar {
+  background-color: #000;
+  width: 15rem;
+}
+
+.sidebar h2,
+.sidebar li,
+.sidebar a,
+footer p {
+  color: #fff;
+}
+
+.sidebar h2 {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar li {
+  margin-left: 2.5rem;
+}
+
+.content {
+  width: 100%;
+  margin: 0 1.4rem;
+}
+
+.content h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.add-user-card,
+.edit-user-card {
+  width: 290px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 20px 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.confirmed-user,
+.confirmed-edit,
+.confirm-delete,
+.confirmed-deleted {
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  padding: 15px 10px 15px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.show-confirmed-add,
+.show-confirmed-edit,
+.show-confirmed-delete,
+.show-confirmed-deleted,
+.show-add-popup,
+.show-edit-popup {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+}
+
+.confirm {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.p1 {
+  font-weight: 500;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  padding-bottom: 15px;
+}
+
+.p2 {
+  font-weight: 500;
+  text-align: end;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.add-user-card h2,
+.edit-user-card h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.9rem;
+  text-align: center;
+}
+
+.add-user-card p,
+.edit-user-card p {
+  font-size: 0.9rem;
+}
+
+.add-user-card button,
+.edit-user-card button {
+  margin-top: 0.5rem;
+  background-color: #fff;
+  padding: 1px 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-user-button {
+  padding: 1px 4px;
+  border-radius: 7px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px;
+}
+
+table button {
+  padding: 1px 8px;
+  cursor: pointer;
+  box-shadow: 0 2px;
+}
+
+footer {
+  background-color: #000;
+  padding: 5px;
+  text-align: center;
+}
