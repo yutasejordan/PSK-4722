@@ -81,8 +81,8 @@ const MainContent = () => {
       <div
         className={
           isAddActive
-            ? "bg-slate-500 p-6  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 rounded-lg shadow-xl"
-            : "bg-slate-500 p-6  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 rounded-lg shadow-xl hidden"
+            ? "bg-white p-6 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] rounded-lg shadow-xl z-20"
+            : "hidden"
         }
       >
         <form>
@@ -100,9 +100,16 @@ const MainContent = () => {
       </div>
       <div
         className={
+          isAddActive
+            ? "fixed top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.6)] z-10"
+            : ""
+        }
+      ></div>
+      <div
+        className={
           isEditActive
-            ? "bg-slate-500 p-6  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 rounded-lg shadow-xl"
-            : "bg-slate-500 p-6  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 rounded-lg shadow-xl hidden"
+            ? "bg-white p-6 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] rounded-lg shadow-xl z-20"
+            : "hidden"
         }
       >
         <form>
@@ -118,6 +125,13 @@ const MainContent = () => {
           </div>
         </form>
       </div>
+      <div
+        className={
+          isEditActive
+            ? "fixed top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.6)] z-10"
+            : ""
+        }
+      ></div>
     </main>
   );
 };
