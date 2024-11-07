@@ -1,32 +1,37 @@
-import { useState } from "react";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import HomePage from "./HomePage";
+import About from "./About";
+import Tes from "./Tes";
+import Products from "./Products";
 
 function App() {
-  // const [nilai, setNilai] = useState(0);
-  const [inputNama, setInputNama] = useState("");
-  const [inputNim, setInputNim] = useState("");
-
-  // function handleClick() {
-  //   setNilai(nilai + 1);
-  // }
-
-  function handleChangeNama() {
-    setInputNama(event.target.value);
-  }
-  function handleChangeNim() {
-    setInputNama(event.target.value);
-  }
-
   return (
-    <>
-      {/* <h1>Hitung {nilai}</h1>
-      <button onClick={handleClick}>klik</button> */}
-      <form action="">
-        <input type="text" value={inputNama} onChange={handleChangeNama} />
-        <input type="text" value={inputNim} onChange={handleChangeNim} />
-        <button type="submit" onClick={handleClick}></button>
-      </form>
-    </>
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/product/beras">Product Beras</Link>
+          </li>
+          <li>
+            <Link to="/product/pasir">Produk Pasir</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />}>
+          <Route path="tes" element={<Tes />} />
+        </Route>
+        <Route path="/product/:id" element={<Products />} />
+      </Routes>
+    </Router>
   );
 }
 

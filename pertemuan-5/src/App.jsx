@@ -1,7 +1,12 @@
 import AdminLayout from "./layouts/AdminLayout";
+import Mahasiswa from "./pages/admin/Mahasiswa";
 
-const App = () => {
-  return <AdminLayout />;
-};
+function App() {
+  return (
+    <AdminLayout>
+      <Mahasiswa />
+    </AdminLayout>
+  );
+}
 
 export default App;

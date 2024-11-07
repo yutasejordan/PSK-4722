@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-const Table = ({ id, nim, nama }) => {
+export default function Table({ children }) {
   return (
     <table className="w-full mt-8 text-center border-collapse">
       <thead className="border-2 border-black">
@@ -11,19 +11,21 @@ const Table = ({ id, nim, nama }) => {
           <th className="p-5 border-2 border-black">Aksi</th>
         </tr>
       </thead>
-      <tbody className="border-2 border-black">
-        <tr className="bg-white">
-          <td className="p-4 border-2 border-black">{id}</td>
-          <td className="p-4 border-2 border-black">{nim}</td>
-          <td className="p-4 border-2 border-black">{nama}</td>
-          <td className="p-4 border-2 border-black">
-            <Button text="Ubah" bgColor="bg-yellow-500 hover:bg-yellow-600" />
-            <Button text="Hapus" bgColor="bg-red-500 hover:bg-red-600 ml-4" />
-          </td>
-        </tr>
-      </tbody>
+      <tbody className="border-2 border-black">{children}</tbody>
     </table>
   );
-};
+}
 
-export default Table;
+export const TableBody = ({ id, nama, nim }) => {
+  return (
+    <tr className="bg-white">
+      <td className="p-4 border-2 border-black">{id}</td>
+      <td className="p-4 border-2 border-black">{nama}</td>
+      <td className="p-4 border-2 border-black">{nim}</td>
+      <td className="p-4 border-2 border-black">
+        <Button text="Ubah" bgColor="bg-yellow-500 hover:bg-yellow-600" />
+        <Button text="Hapus" bgColor="bg-red-500 hover:bg-red-600 ml-4" />
+      </td>
+    </tr>
+  );
+};
