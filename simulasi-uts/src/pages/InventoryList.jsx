@@ -5,8 +5,8 @@ const InventoryList = ({ items, onDeleteItem, onToggleItem }) => {
     <div className="w-full flex justify-between py-5">
       <section className="p-5 bg-white w-1/2 rounded-lg shadow-lg">
         <h2 className="font-bold text-4xl mb-4 self-center">Daftar Barang</h2>
-        {items.map((item) => (
-          <div className="bg-slate-200 p-7 rounded-lg mb-4">
+        {items.map((item, i) => (
+          <div className="bg-slate-200 p-7 rounded-lg mb-4" key={i}>
             <div className="flex justify-between items-center">
               <h2 className="font-bold text-xl mb-2">{item.name}</h2>
               <input

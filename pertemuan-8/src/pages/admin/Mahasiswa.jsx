@@ -12,7 +12,7 @@ const Mahasiswa = () => {
   return (
     <>
       <header className="flex justify-between">
-        <h2 className="font-semibold">Daftar User</h2>
+        <h2 className="font-semibold text-xl">Admin Mahasiswa</h2>
         <Button
           text="Tambah"
           bgColor="bg-green-600 hover:bg-green-700"

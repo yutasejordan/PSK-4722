@@ -6,17 +6,15 @@ import { useState } from "react";
 const Mahasiswa = () => {
   const [formActive, setFormActive] = useState(false);
   const [mahasiswa, setMahasiswa] = useState([]);
-  const modalFormTambahMahasiswa = () => setFormActive(!formActive);
-  const handleAddMahasiswa = (mhs) => setMahasiswa([...mahasiswa, mhs]);
 
   return (
     <>
       <header className="flex justify-between">
-        <h2 className="font-semibold">Daftar User</h2>
+        <h2 className="font-semibold text-xl">Admin Mahasiswa</h2>
         <Button
           text="Tambah"
           bgColor="bg-green-600 hover:bg-green-700"
-          handleClick={modalFormTambahMahasiswa}
+          handleClick={() => setFormActive(!formActive)}
         />
       </header>
       <Table>
@@ -26,8 +24,8 @@ const Mahasiswa = () => {
       </Table>
       <ModalFormAddMahasiswa
         formActive={formActive}
-        setFormActive={modalFormTambahMahasiswa}
-        onAddMahasiswa={handleAddMahasiswa}
+        setFormActive={() => setFormActive(!formActive)}
+        onAddMahasiswa={(mhs) => setMahasiswa([...mahasiswa, mhs])}
       />
     </>
   );
